@@ -6,10 +6,6 @@
   <title>مدرسة التداول</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     html {
       scroll-behavior: smooth;
     }
@@ -24,7 +20,7 @@
 
     header {
       padding: 34px 18px;
-      background: #176b55;
+      background: #176b52;
       color: white;
       text-align: center;
     }
@@ -36,21 +32,18 @@
 
     header p {
       margin: 0;
+      font-size: 17px;
     }
 
     main {
-      width: min(760px, 92%);
-      margin: 24px auto 50px;
-    }
-
-    .intro {
-      margin-bottom: 22px;
-      text-align: center;
+      width: min(900px, calc(100% - 32px));
+      margin: 28px auto;
     }
 
     .cards {
       display: grid;
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
     }
 
     .card {
@@ -71,48 +64,52 @@
     }
 
     .card h2 {
-      margin: 0 0 6px;
+      margin: 0 0 5px;
       font-size: 20px;
     }
 
     .card p {
       margin: 0;
       color: #52645f;
-      font-size: 14px;
+      font-size: 16px;
     }
 
-    .lesson {
+    .article {
       margin-top: 24px;
       padding: 22px;
       border-radius: 14px;
       background: white;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
       scroll-margin-top: 16px;
     }
 
-    .lesson h2 {
+    .article h2 {
       margin-top: 0;
-      color: #176b55;
+      color: #176b52;
+      font-size: 24px;
+    }
+
+    .article p,
+    .article li {
+      font-size: 17px;
     }
 
     .back-link {
-      color: #176b55;
-      font-weight: bold;
-    }
-
-    .notice {
-      margin-top: 22px;
-      padding: 14px;
-      border-radius: 10px;
-      background: #e6f1ed;
-      font-size: 14px;
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      background: #176b52;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
     }
 
     footer {
       padding: 18px;
       color: #52645f;
       text-align: center;
-      font-size: 13px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -120,80 +117,75 @@
 <body>
   <header>
     <h1>مدرسة التداول</h1>
-    <p>اتعلّم أساسيات التداول خطوة بخطوة</p>
+    <p>تعلّم أساسيات التداول خطوة بخطوة وبطريقة مبسطة</p>
   </header>
 
   <main>
-    <div class="intro">
-      <h2>التعلم يبدأ من هنا</h2>
-      <p>اختار موضوعًا من البطاقات عشان تقرأ شرحه.</p>
-    </div>
-
-    <nav class="cards" aria-label="دروس التداول">
+    <section class="cards" id="cards" aria-label="أقسام التعلم">
       <a class="card" href="#what-is-trading">
         <h2>ما هو التداول؟</h2>
-        <p>تعرّف على معنى التداول وطريقة عمله.</p>
+        <p>تعرّف على معنى التداول وكيف تعمل الأسواق.</p>
       </a>
 
       <a class="card" href="#basics">
         <h2>تعلم الأساسيات أولًا</h2>
-        <p>مصطلحات ومفاهيم مهمة للمبتدئين.</p>
+        <p>ابدأ بالمفاهيم المهمة قبل اتخاذ أي قرار.</p>
       </a>
 
       <a class="card" href="#risks">
         <h2>افهم المخاطر</h2>
-        <p>اعرف المخاطر قبل اتخاذ أي قرار.</p>
+        <p>اعرف المخاطر وتعلّم كيف تتعامل معها بحذر.</p>
       </a>
 
       <a class="card" href="#start-learning">
         <h2>ابدأ التعلم</h2>
-        <p>اقرأ الدروس بالترتيب وتعلّم بهدوء.</p>
+        <p>اتبع خطوات بسيطة لتبدأ رحلتك التعليمية.</p>
       </a>
-    </nav>
+    </section>
 
-    <section class="lesson" id="what-is-trading">
+    <section class="article" id="what-is-trading">
       <h2>ما هو التداول؟</h2>
       <p>
-        التداول هو شراء وبيع أشياء مالية، مثل الأسهم أو العملات،
-        بهدف الاستفادة من تغيّر أسعارها. السعر ممكن يرتفع أو ينخفض،
-        لذلك يمكن أن يربح المتداول أو يخسر.
+        التداول هو شراء وبيع أصول مالية، مثل الأسهم أو العملات،
+        بهدف الاستفادة من تغيّر أسعارها. وقد ترتفع الأسعار أو تنخفض،
+        لذلك لا توجد نتيجة مضمونة.
       </p>
-      <a class="back-link" href="#top">العودة إلى البطاقات</a>
+      <a class="back-link" href="#cards">العودة إلى البطاقات</a>
     </section>
 
-    <section class="lesson" id="basics">
+    <section class="article" id="basics">
       <h2>تعلم الأساسيات أولًا</h2>
       <p>
-        قبل أن تفكر في التداول، تعلّم معنى السعر، والشراء، والبيع،
-        والربح، والخسارة. وخذ وقتك في فهم كل كلمة قبل الانتقال للخطوة التالية.
+        قبل التفكير في التداول، تعلّم المصطلحات الأساسية، وافهم أنواع
+        الأصول وطريقة عمل أوامر الشراء والبيع. خذ وقتك في التعلم ولا
+        تتسرع في اتخاذ القرارات.
       </p>
-      <a class="back-link" href="#top">العودة إلى البطاقات</a>
+      <a class="back-link" href="#cards">العودة إلى البطاقات</a>
     </section>
 
-    <section class="lesson" id="risks">
+    <section class="article" id="risks">
       <h2>افهم المخاطر</h2>
       <p>
-        أسعار الأسواق تتغير، ولا توجد طريقة تضمن الربح. لا تستخدم مالًا
-        تحتاجه لمصاريفك، ولا تدخل في صفقة قبل أن تفهم احتمال الخسارة.
+        قد تخسر جزءًا من المال الذي تستثمره، وقد تخسر المبلغ كله.
+        لا تستخدم مالًا تحتاج إليه لمصاريفك، ولا تتداول اعتمادًا على
+        وعود الربح السريع.
       </p>
-      <a class="back-link" href="#top">العودة إلى البطاقات</a>
+      <a class="back-link" href="#cards">العودة إلى البطاقات</a>
     </section>
 
-    <section class="lesson" id="start-learning">
+    <section class="article" id="start-learning">
       <h2>ابدأ التعلم</h2>
-      <p>
-        ابدأ بقراءة درس «ما هو التداول؟»، ثم تعلّم الأساسيات،
-        وبعدها اقرأ عن المخاطر. التعلّم يحتاج وقتًا وصبرًا.
-      </p>
-      <div class="notice">
-        هذا الموقع للتعلّم فقط، وليس نصيحة مالية أو توصية بشراء أو بيع أي شيء.
-      </div>
-      <a class="back-link" href="#top">العودة إلى البطاقات</a>
+      <ol>
+        <li>تعلّم المفاهيم الأساسية ومخاطر التداول.</li>
+        <li>تدرّب على حساب تجريبي قبل المخاطرة بأموال حقيقية.</li>
+        <li>اتخذ قراراتك بهدوء، ولا تستثمر أكثر مما تستطيع تحمل خسارته.</li>
+      </ol>
+      <a class="back-link" href="#cards">العودة إلى البطاقات</a>
     </section>
   </main>
 
   <footer>
-    مدرسة التداول — محتوى تعليمي للمبتدئين
+    هذا الموقع للتعلم فقط، وليس نصيحة استثمارية.
   </footer>
 </body>
 </html>
