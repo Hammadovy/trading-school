@@ -63,6 +63,12 @@
       box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
     }
 
+    .card:focus-visible,
+    .back-link:focus-visible {
+      outline: 3px solid #e0a832;
+      outline-offset: 3px;
+    }
+
     .card h2 {
       margin: 0 0 5px;
       font-size: 20px;
@@ -92,6 +98,24 @@
     .article p,
     .article li {
       font-size: 17px;
+    }
+
+    .term {
+      margin: 16px 0;
+      padding: 14px;
+      border-right: 4px solid #176b52;
+      border-radius: 8px;
+      background: #f4f7f6;
+    }
+
+    .term h3 {
+      margin: 0 0 4px;
+      font-size: 19px;
+    }
+
+    .term p {
+      margin: 0;
+      color: #52645f;
     }
 
     .back-link {
@@ -141,6 +165,11 @@
         <h2>ابدأ التعلم</h2>
         <p>اتبع خطوات بسيطة لتبدأ رحلتك التعليمية.</p>
       </a>
+
+      <a class="card" href="#glossary">
+        <h2>قاموس المصطلحات</h2>
+        <p>تعرّف على كلمات مهمة ستصادفها في التداول.</p>
+      </a>
     </section>
 
     <section class="article" id="what-is-trading">
@@ -180,6 +209,37 @@
         <li>تدرّب على حساب تجريبي قبل المخاطرة بأموال حقيقية.</li>
         <li>اتخذ قراراتك بهدوء، ولا تستثمر أكثر مما تستطيع تحمل خسارته.</li>
       </ol>
+      <a class="back-link" href="#cards">العودة إلى البطاقات</a>
+    </section>
+
+    <section class="article" id="glossary">
+      <h2>قاموس المصطلحات</h2>
+
+      <div class="term">
+        <h3>السهم</h3>
+        <p>حصة صغيرة في شركة. قد يتغير سعر السهم صعودًا أو هبوطًا.</p>
+      </div>
+
+      <div class="term">
+        <h3>السوق المالي</h3>
+        <p>مكان أو نظام تُشترى وتُباع فيه أصول مالية، مثل الأسهم.</p>
+      </div>
+
+      <div class="term">
+        <h3>السعر</h3>
+        <p>المبلغ الذي يُعرض به الأصل للبيع أو يُطلب لشرائه في وقت معين.</p>
+      </div>
+
+      <div class="term">
+        <h3>الربح والخسارة</h3>
+        <p>الربح هو زيادة قيمة ما تملكه، والخسارة هي انخفاضها. ولا يمكن ضمان الربح.</p>
+      </div>
+
+      <div class="term">
+        <h3>الحساب التجريبي</h3>
+        <p>حساب للتدرب على استخدام منصة تداول بأموال افتراضية بدل المال الحقيقي.</p>
+      </div>
+
       <a class="back-link" href="#cards">العودة إلى البطاقات</a>
     </section>
   </main>
